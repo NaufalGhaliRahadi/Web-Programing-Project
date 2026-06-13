@@ -247,3 +247,48 @@ Artikel::create([
 Route resource (dalam grup middleware('auth')):
 ```
 Route::resource('artikel', ArtikelController::class);
+```
+---
+### 5.4 Halaman Publik
+PublicController:
+
+home(): 5 artikel terbaru + widget kategori
+
+filterByCategory($id): artikel berdasarkan kategori
+
+categories(): daftar semua kategori
+
+about(): halaman tentang
+
+PublicArticleController:
+
+show($id): detail artikel + 5 artikel terkait (kategori sama)
+
+View public/home.blade.php menampilkan artikel dalam card dengan gambar thumbnail, meta info, tombol baca.
+
+View public/show.blade.php menampilkan breadcrumb, isi artikel, widget artikel terkait (dengan gambar kecil, judul, tanggal) dan widget kategori.
+
+### 5.5 Layout dan Tema
+Layout CMS (layouts/app.blade.php): sidebar gelap, flash message.
+
+Layout publik (layouts/public.blade.php): header gradien biru, menu (Beranda, Artikel, Kategori, Tentang), tombol Login/Dashboard (berubah sesuai status login), footer.
+
+Semua menggunakan Bootstrap 5 dan Font Awesome 6.
+
+---
+## 6. Pengujian
+### 6.1 Skenario Uji UTS
+
+|No	| Skenario |	Hasil    |
+|---|----------|-------------|
+|1	|Tambah penulis dengan upload foto |Berhasil, foto tersimpan|
+|2	|Edit penulis (ganti foto)|	Foto lama terhapus, foto baru tampil|
+|3	|Hapus penulis tanpa artikel|	Berhasil|
+|4	|Hapus penulis yang punya artikel|	Gagal (toast error)|
+|5	|Tambah kategori|	Berhasil|
+|6	|Hapus kategori yang dipakai artikel|	Gagal|
+|7	|Tambah artikel dengan gambar|	Berhasil|
+|8	|Edit artikel (ganti gambar)|	Gambar lama terhapus|
+|9	|Hapus artikel|	Berhasil|
+|10	|Dark mode toggle|	Tema berubah, tersimpan|
+|11	|Semua operasi async|	Fetch API bekerja, toast muncul|
