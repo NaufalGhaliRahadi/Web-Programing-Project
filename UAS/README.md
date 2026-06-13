@@ -61,8 +61,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 # Aplikasi Blog CMS + Halaman Publik - UAS Pemrograman Web
 
-**Nama:** [Nama Lengkap Anda]  
-**NIM:** [NIM Anda]  
+**Nama:** [Naufal Ghali Rahadi]  
+**NIM:** [240605110161]  
 **Mata Kuliah:** Pemrograman Web  
 **Semester:** Genap 2025/2026  
 **Dosen:** A’la Syauqi M.Kom.
