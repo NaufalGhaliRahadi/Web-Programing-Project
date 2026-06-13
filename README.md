@@ -375,13 +375,15 @@ Atau jika langsung di root:
 bash
 git clone https://github.com/NaufalGhalRahadi/aplikasi-blog-240605110161.git
 cd aplikasi-blog-240605110161
-2. Install dependensi PHP
-bash
+```
+### 2. Install dependensi PHP
+```bash
 composer install
-3. Konfigurasi environment
+```
+### 3. Konfigurasi environment
 Copy file .env.example menjadi .env
 
-bash
+```bash
 cp .env.example .env   # Linux/Mac
 copy .env.example .env # Windows
 Buka file .env dan sesuaikan konfigurasi database:
@@ -390,23 +392,27 @@ env
 DB_DATABASE=db_blog
 DB_USERNAME=root
 DB_PASSWORD=
-4. Generate application key
-bash
+```
+### 4. Generate application key
+```bash
 php artisan key:generate
-5. Jalankan migrasi (tabel sessions)
-bash
+```
+### 5. Jalankan migrasi (tabel sessions)
+```bash
 php artisan session:table
 php artisan migrate
-6. Buat symbolic link storage
-bash
+```
+### 6. Buat symbolic link storage
+```bash
 php artisan storage:link
-7. Buat folder upload dan file default
-Pastikan folder storage/app/public/foto dan storage/app/public/gambar sudah ada (buat jika belum).
+```
+### 7. Buat folder upload dan file default
+- Pastikan folder storage/app/public/foto dan storage/app/public/gambar sudah ada (buat jika belum).
 
-Letakkan file default.png (foto profil default) di storage/app/public/foto/.
+- Letakkan file default.png (foto profil default) di storage/app/public/foto/.
 
-8. (Opsional) Buat akun penulis pertama
-bash
+### 8. (Opsional) Buat akun penulis pertama
+```bash
 php artisan tinker
 php
 App\Models\Penulis::create([
@@ -417,18 +423,19 @@ App\Models\Penulis::create([
     'foto' => 'default.png'
 ]);
 Ketik exit untuk keluar.
-
-9. Jalankan server development
-bash
+```
+### 9. Jalankan server development
+```bash
 php artisan serve
-10. Akses aplikasi
-Halaman publik: http://localhost:8000
+```
+### 10. Akses aplikasi
+- Halaman publik: http://localhost:8000
 
-Halaman login admin: http://localhost:8000/login
+- Halaman login admin: http://localhost:8000/login
 
-Username: admin
+- Username: admin
 
-Password: 12345678 (atau sesuai akun yang dibuat)
+-- Password: 12345678 (atau sesuai akun yang dibuat)
 
 Catatan: Pastikan database db_blog sudah ada dengan tabel penulis, kategori_artikel, artikel (dari UTS). Jika belum, import file db_blog.sql yang tersedia di folder UTS/ repositori ini.
 
