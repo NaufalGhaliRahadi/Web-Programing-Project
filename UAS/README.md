@@ -56,3 +56,138 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+# Aplikasi Blog CMS + Halaman Publik - UAS Pemrograman Web
+
+**Nama:** [Nama Lengkap Anda]  
+**NIM:** [NIM Anda]  
+**Mata Kuliah:** Pemrograman Web  
+**Semester:** Genap 2025/2026  
+**Dosen:** A’la Syauqi M.Kom.
+
+---
+
+## 📌 Deskripsi Proyek
+
+Aplikasi Blog ini merupakan **sistem manajemen konten (CMS)** lengkap yang dilengkapi dengan **halaman publik** untuk pengunjung. Dibangun menggunakan **Laravel 11** dan **Bootstrap 5**. Aplikasi ini memungkinkan penulis (admin) untuk mengelola artikel, penulis, dan kategori artikel, sedangkan pengunjung dapat membaca artikel terbaru, menyaring berdasarkan kategori, serta melihat artikel terkait.
+
+Proyek ini memenuhi seluruh spesifikasi **Ujian Akhir Semester (UAS)** yang meliputi:
+- Halaman publik dengan 5 artikel terbaru dan widget kategori
+- Filter artikel berdasarkan kategori
+- Halaman detail artikel dengan 5 artikel terkait dari kategori yang sama
+- CMS (login, CRUD artikel, penulis, kategori) yang dilindungi autentikasi
+- Tampilan bersih, sederhana, elegan, dan responsif
+
+> **Catatan:** Proyek ini merupakan pengembangan dari Modul 10 (CMS) dengan penambahan fitur publik sesuai UAS.
+
+---
+
+## 🔧 Teknologi yang Digunakan
+
+- **Framework:** Laravel 11
+- **Frontend:** Bootstrap 5, Font Awesome 6, CSS3
+- **Database:** MySQL (db_blog)
+- **Bahasa Pemrograman:** PHP 8.2+
+- **Tools:** Laragon, Composer, Git, Visual Studio Code
+
+---
+
+## ⚙️ Fitur Aplikasi
+
+### 🔐 Autentikasi (Login & Registrasi)
+- Login dengan username dan password
+- Registrasi akun penulis baru
+- Proteksi halaman CMS dengan middleware `auth`
+
+### 📝 CMS (Sistem Manajemen Konten)
+| Fitur | Keterangan |
+|-------|-------------|
+| Manajemen Artikel | Tambah, edit, hapus artikel (dengan upload gambar) |
+| Manajemen Penulis | Tambah, edit, hapus penulis (dengan upload foto) |
+| Manajemen Kategori | Tambah, edit, hapus kategori artikel |
+| Dashboard | Menampilkan statistik, 5 artikel terbaru milik penulis yang login, dan waktu login |
+
+### 🌐 Halaman Publik (Tanpa Login)
+| Halaman | Fungsi |
+|---------|--------|
+| Beranda | Menampilkan 5 artikel terbaru, widget kategori di samping |
+| Filter Kategori | Menyaring artikel berdasarkan kategori yang dipilih |
+| Detail Artikel | Menampilkan isi lengkap artikel + 5 artikel terkait (kategori sama) |
+| Daftar Kategori | Menampilkan semua kategori dengan jumlah artikel |
+| Halaman Tentang | Informasi statis tentang blog |
+
+### 🧭 Navigasi
+- Menu **Beranda**, **Artikel** (sama dengan beranda), **Kategori**, **Tentang**
+- Tombol **Login Admin** / **Dashboard** di pojok kanan atas (berubah sesuai status login)
+- Breadcrumb di halaman detail artikel
+- Tombol **Kembali ke Beranda** di halaman detail
+
+---
+
+## 📁 Struktur Database (db_blog)
+
+Tabel yang digunakan sesuai dengan soal UTS dan Modul 10 (tanpa perubahan struktur):
+
+| Tabel | Kolom utama |
+|-------|--------------|
+| `penulis` | id, nama_depan, nama_belakang, user_name, password, foto |
+| `kategori_artikel` | id, nama_kategori, keterangan |
+| `artikel` | id, id_penulis, id_kategori, judul, isi, gambar, hari_tanggal |
+
+Relasi:  
+- `artikel.id_penulis` → `penulis.id` (ON DELETE RESTRICT)  
+- `artikel.id_kategori` → `kategori_artikel.id` (ON DELETE RESTRICT)
+
+---
+
+## 📁 Struktur Folder (Laravel)
+
+Hanya direktori utama yang relevan:
+
+```
+aplikasi-blog/
+├── app/
+│ ├── Http/
+│ │ ├── Controllers/
+│ │ │ ├── ArtikelController.php
+│ │ │ ├── PenulisController.php
+│ │ │ ├── KategoriArtikelController.php
+│ │ │ ├── LoginController.php
+│ │ │ ├── RegisterController.php
+│ │ │ ├── DashboardController.php
+│ │ │ ├── PublicController.php
+│ │ │ └── PublicArticleController.php
+│ │ └── Middleware/
+│ └── Models/
+│ ├── User.php
+│ ├── Artikel.php
+│ ├── Penulis.php
+│ └── KategoriArtikel.php
+├── resources/
+│ └── views/
+│ ├── layouts/
+│ │ ├── app.blade.php (layout CMS)
+│ │ └── public.blade.php (layout publik)
+│ ├── artikel/
+│ ├── penulis/
+│ ├── kategori/
+│ ├── dashboard/
+│ ├── login/
+│ ├── auth/
+│ └── public/
+│ ├── home.blade.php
+│ ├── show.blade.php
+│ ├── categories.blade.php
+│ └── about.blade.php
+├── routes/
+│ └── web.php
+├── public/
+│ └── storage/ (symlink ke storage/app/public)
+├── storage/
+│ └── app/public/
+│ ├── foto/ (foto profil penulis)
+│ └── gambar/ (gambar artikel)
+├── .env
+└── composer.json
