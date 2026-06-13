@@ -16,7 +16,7 @@
 4. [Implementasi UTS (Vanilla PHP)](#4-implementasi-uts-vanilla-php)
 5. [Implementasi UAS (Laravel)](#5-implementasi-uas-laravel)
 6. [Pengujian](#6-pengujian)
-7. [Kesimpulan dan Saran](#7-kesimpulan)
+7. [Kesimpulan](#7-kesimpulan)
 
 
 ---
