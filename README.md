@@ -325,3 +325,41 @@ Semua skenario berhasil. Aplikasi UTS dan UAS berfungsi tanpa error, memenuhi se
 
 - Semua fitur UAS terpenuhi: halaman publik tanpa login, controller terpisah, layout sendiri, tampilan bersih dan responsif.
 
+---
+# Aplikasi Blog - 240605110161
+
+**Nama Lengkap:** Naufal Ghali Rahadi  
+**NIM:** 240605110161  
+**Mata Kuliah:** Pemrograman Web  
+**Semester:** Genap 2025/2026  
+**Dosen:** A’la Syauqi M.Kom.
+
+---
+
+## 📌 Deskripsi Singkat Aplikasi
+
+Aplikasi Blog ini merupakan sistem manajemen konten (CMS) yang dibangun dengan **Laravel 11** sebagai proyek **UAS**. Aplikasi ini memiliki dua bagian:
+
+1. **Halaman Admin (CMS)** – hanya dapat diakses setelah login. Admin dapat mengelola:
+   - **Artikel** (tambah, edit, hapus, upload gambar)
+   - **Penulis** (tambah, edit, hapus, upload foto profil)
+   - **Kategori artikel** (tambah, edit, hapus)
+
+2. **Halaman Publik** – dapat diakses oleh siapa saja tanpa login, menampilkan:
+   - **5 artikel terbaru** di halaman utama
+   - **Widget kategori** di samping untuk menyaring artikel
+   - **Halaman detail artikel** dengan isi lengkap dan **5 artikel terkait** dari kategori yang sama
+
+Aplikasi ini memenuhi seluruh spesifikasi Ujian Akhir Semester (UAS) Pemrograman Web.
+
+> Proyek ini merupakan kelanjutan dari **UTS** (Vanilla PHP) yang sebelumnya telah membangun CMS dengan PHP native. Laporan lengkap mencakup kedua proyek.
+
+---
+
+## 🚀 Langkah-langkah Menjalankan Aplikasi Secara Lokal (UAS Laravel)
+
+### Prasyarat
+- PHP 8.2 atau lebih baru
+- Composer
+- MySQL (Laragon / XAMPP)
+- Git (opsional)
