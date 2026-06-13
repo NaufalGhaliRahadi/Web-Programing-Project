@@ -128,3 +128,20 @@ CREATE TABLE artikel (
 └── uploads_artikel/              # Folder gambar artikel
     └── .htaccess                 # Proteksi eksekusi PHP
 
+
+
+🚀 Cara Menjalankan
+🐳 Menggunakan Docker (Direkomendasikan)
+Pastikan Docker dan Docker Compose sudah terinstall.
+# 1. Clone repository ini
+git clone <URL_REPOSITORY_ANDA>
+cd blog
+
+# 2. Jalankan semua service
+docker compose up -d
+
+# 3. Akses aplikasi di browser
+# - Aplikasi : http://localhost:8888
+# - phpMyAdmin: http://localhost:8881
+Catatan: Database akan otomatis dibuat dari file db_blog.sql saat container pertama kali dijalankan.
+
