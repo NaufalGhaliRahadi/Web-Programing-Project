@@ -336,6 +336,7 @@ Semua skenario berhasil. Aplikasi UTS dan UAS berfungsi tanpa error, memenuhi se
 **Mata Kuliah:** Pemrograman Web  
 **Semester:** Genap 2025/2026  
 **Dosen:** A’la Syauqi M.Kom.
+**Link Youtube** https://youtu.be/3VygEuoRTsY
 
 ---
 
