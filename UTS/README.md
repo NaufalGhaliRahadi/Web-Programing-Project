@@ -102,6 +102,7 @@ CREATE TABLE artikel (
 ) ENGINE=InnoDB CHARSET=utf8mb4;
 
 ```
+---
 ## 📁 Struktur Folder
 ```
 
