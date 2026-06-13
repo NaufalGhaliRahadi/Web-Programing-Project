@@ -1,9 +1,11 @@
 # Sistem Manajemen Blog (CMS) - UTS Pemrograman Web
 
-**Nama:** [Naufal Ghali Rahadi]  
-**NIM:** [240605110161]  
+**Nama Lengkap:** Naufal Ghali Rahadi  
+**NIM:** 240605110161  
 **Mata Kuliah:** Pemrograman Web  
-**Semester:** Genap 2025/2026
+**Semester:** Genap 2025/2026  
+**Dosen:** A’la Syauqi M.Kom.
+**Link Youtube** https://youtu.be/-saOFPwQvq8
 
 ---
 
